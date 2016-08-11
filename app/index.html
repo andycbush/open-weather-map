@@ -5,24 +5,19 @@
     <meta charset="UTF-8">
     <title>Open Weather Map App</title>
 
-    <!-- the typical metags-->
-    <meta charset="utf-8">
-
-    <!-- link all the css styles starting with the external ones and then your own styles-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
 
 </head>
 
 <body>
-    <a ng-href="#/index.html">Home</a>
+    <a href="index.html">Home</a>
     <a ng-href="#/cities/New York">New York</a>
     <a ng-href="#/cities/Dallas">Dallas</a>
     <a ng-href="#/cities/Chicago">Chicago</a>
+    <a href="#/cities/NotOnList">Unsupported city</a>
     <div ng-view></div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
     <script type="text/javascript" src="owm-app.js"></script>
 </body>
 

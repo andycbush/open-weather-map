@@ -2,7 +2,8 @@ angular.module('OWMApp', ['ngRoute'])
 
 .value('owmCities', ['New York', 'Dallas', 'Chicago'])
     .config(function ($routeProvider) {
-        $routeProvider.when('/', {
+        $routeProvider
+            .when('/', {
                 templateUrl: 'home.html',
                 controller: 'HomeCtrl as home'
             })
@@ -34,45 +35,10 @@ angular.module('OWMApp', ['ngRoute'])
     })
 
 
-.controller('HomeCtrl', function () {
-    this.welcomeMessage = 'Welcome back home!';
+.controller('HomeCtrl', function ($scope) {
+    this.welcomeMessage = 'Welcome back home!!';
 })
 
 .controller('CityCtrl', function ($scope, city) {
     $scope.city = city;
 });
-
-
-
-
-
-/*
-angular.module('OWMApp', ['ngRoute'])
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/', {
-            templateUrl: 'home.html',
-            controller: 'HomeCtrl'
-        }).when('/city', {
-            templateUrl: 'city.html',
-            controller: 'CityCtrl'
-        });
-    }])
-    .controller('HomeCtrl', function ($scope) {
-        //empty for now
-    })
-    .controller('CityCtrl', function ($scope, $routeParams) {
-        $scope.city = $routeParams.city;
-    });
-*/
-/*
-angular.module('OWMApp', ['ngRoute'])
-    .config(['$routeProvider', function($routeProvider){
-        $routeProvider.when('/', {
-            templateUrl : 'home.html',
-            controller : 'HomeCtrl'
-        });
-    }])
-    .controller('HomeCtrl', function($scope) {
-    //empty for now
-});
-*/
